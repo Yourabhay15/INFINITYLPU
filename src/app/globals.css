@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 210 40% 98%;
+    
+    --card: 256 89% 10%; /* Darker version of secondary for card */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 273 62% 46%; /* #7B2CBF */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 256 89% 43%; /* #3A0CA3 */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 4% 65%;
+
+    --accent: 333 93% 55%; /* #F72585 */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 273 62% 20%; /* Darker primary */
+    --input: 273 62% 15%;
+    --ring: 333 93% 55%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
+    --card: 256 89% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 273 62% 46%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 256 89% 43%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 4% 65%;
+    --accent: 333 93% 55%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 273 62% 20%;
+    --input: 273 62% 15%;
+    --ring: 333 93% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
