@@ -35,7 +35,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="font-headline uppercase font-semibold text-base bg-accent hover:bg-accent/90 shadow-[0_5px_15px_rgba(247,37,133,0.3)] hover:-translate-y-1 transition-all duration-300">
-                <Link href="/contact">Join INFINITY</Link>
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLScTBrdg4xO5iU1Iv6617k31nkIo9RKp8JBBX70QA1OSDitHhQ/viewform?usp=dialog">Join INFINITY</Link>
               </Button>
             </div>
           </div>
