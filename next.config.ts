@@ -10,8 +10,13 @@ const nextConfig: NextConfig = {
     },
   },
   images: {
-    domains: ['localhost', 'placehold.co', 'encrypted-tbn0.gstatic.com', 'i0.wp.com'],
     remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'placehold.co',
