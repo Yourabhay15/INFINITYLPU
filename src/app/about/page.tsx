@@ -33,7 +33,7 @@ const timelineEvents = [
     },
     {
         date: "APR 2025",
-        title: "Game-Verse 2.0",
+        title: "Game-Verse 1.0",
         description: "Hosted the massive Game-Verse 2.0 event on April 14-15, featuring tournaments for BGMI & Free Fire with a prize pool of ₹5,000.",
     },
     {
