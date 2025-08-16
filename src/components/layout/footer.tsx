@@ -44,7 +44,7 @@ export function Footer() {
               </li>
               <li className="flex items-start">
                 <Phone className="text-accent mr-3 mt-1 flex-shrink-0" size={20} />
-                <p className="text-muted-foreground text-sm">+91 7482881168</p>
+                <p className="text-muted-foreground text-sm">+91 7482881168 / +91 9341479167</p>
               </li>
               <li className="flex items-start">
                  <Code className="text-accent mr-3 mt-1 flex-shrink-0" size={20} />

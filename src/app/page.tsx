@@ -13,6 +13,16 @@ const events = [
     image: '/Icons and backgrounds/image.png',
     aiHint: 'esports tournament poster',
     link: '/register',
+    status: 'open',
+  },
+  {
+    title: 'Hackfinity',
+    date: 'COMING SOON',
+    description: 'A thrilling hackathon for innovators and creators. Stay tuned for more details!',
+    image: '/Icons and backgrounds/image.png',
+    aiHint: 'hackathon poster',
+    link: '#',
+    status: 'soon',
   },
 ];
 
@@ -64,7 +74,13 @@ export default function Home() {
               <Card key={index} className="bg-secondary/20 border-primary/20 rounded-xl overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 max-w-sm mx-auto">
                 <CardHeader className="p-0">
                   <div className="relative h-52">
-                    <Image src={event.image} alt={event.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={event.aiHint} />
+                    {event.status === 'soon' ? (
+                      <div className="flex items-center justify-center h-full bg-black">
+                        <h3 className="text-white font-headline text-4xl">Hackfinity</h3>
+                      </div>
+                    ) : (
+                      <Image src={event.image} alt={event.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={event.aiHint} />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -74,9 +90,9 @@ export default function Home() {
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
                   <Button asChild variant="link" className="text-accent p-0 font-semibold group/link">
-                    <Link href={event.link}>
-                      Register Now
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
+                    <Link href={event.link} className={event.status === 'soon' ? 'pointer-events-none' : ''}>
+                      {event.status === 'soon' ? 'Coming Soon' : 'Register Now'}
+                      {event.status !== 'soon' && <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />}
                     </Link>
                   </Button>
                 </CardFooter>
