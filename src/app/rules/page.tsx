@@ -116,6 +116,7 @@ export default function RulesPage() {
                       <li><strong>Room ID/Password Sharing:</strong> Sharing Room IDs or passwords with non-participants is strictly prohibited.</li>
                       <li><strong>Spectating:</strong> Only official tournament staff are allowed to spectate.</li>
                       <li><strong>Organizers' Decision:</strong> All decisions made by the tournament organizers regarding rules, disputes, and final results are binding and final.</li>
+                      <li><strong>No Duty Leaves:</strong> No duty leaves will be provided.</li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
