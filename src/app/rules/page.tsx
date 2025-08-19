@@ -117,6 +117,7 @@ export default function RulesPage() {
                       <li><strong>Spectating:</strong> Only official tournament staff are allowed to spectate.</li>
                       <li><strong>Organizers' Decision:</strong> All decisions made by the tournament organizers regarding rules, disputes, and final results are binding and final.</li>
                       <li><strong>No Duty Leaves:</strong> No duty leaves will be provided.</li>
+                      <li><strong>Personal Equipment:</strong> Participants must bring their own cushions, fans, chargers, and other equipment.</li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>

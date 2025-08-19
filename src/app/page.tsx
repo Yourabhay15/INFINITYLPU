@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 const events = [
   {
     title: 'Game-Verse 2.0',
-    date: '25 - 27 SEPTEMBER',
+    date: '25 - 26 SEPTEMBER',
     description: 'The ultimate showdown for BGMI & Free Fire MAX players. Squads Only tournament with ₹69 entry fee per person. Compete for exciting prizes!',
     image: '/Icons and backgrounds/image.png',
     aiHint: 'esports tournament poster',
