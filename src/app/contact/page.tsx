@@ -1,11 +1,51 @@
 
+"use client";
+
 import { Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { useState, FormEvent } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 export default function ContactPage() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(event.currentTarget);
+    formData.append('form-name', 'contact');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Your message has been sent.",
+        });
+        (event.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <>
       <header className="py-32 lg:py-40 bg-black text-center" data-ai-hint="communication lines">
@@ -58,8 +98,7 @@ export default function ContactPage() {
               </div>
               <div className="bg-secondary/20 p-8 rounded-xl border border-primary/20">
                 <h3 className="font-headline text-3xl text-accent mb-8 text-center">Send Us a Message</h3>
-                <form name="contact" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="contact" />
+                <form name="contact" onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <p>
                       <label className="block text-sm font-medium text-muted-foreground mb-2">Full Name <Input name="name" type="text" placeholder="Enter your full name" required /></label>
@@ -78,7 +117,9 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <div className="mt-8">
-                    <Button type="submit" className="w-full">Send Message</Button>
+                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </Button>
                   </div>
                 </form>
               </div>
