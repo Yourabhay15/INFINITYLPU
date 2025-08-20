@@ -61,26 +61,21 @@ export default function ContactPage() {
                 <form name="contact" method="POST" data-netlify="true">
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">Full Name</label>
-                      <Input id="name" name="name" type="text" placeholder="Enter your full name" required />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">Email Address</label>
-                      <Input id="email" name="email" type="email" placeholder="Enter your email address" required />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-muted-foreground mb-2">Phone Number</label>
-                      <Input id="phone" name="phone" type="tel" placeholder="Enter your phone number" />
-                    </div>
-                    <div>
-                      <label htmlFor="registration-number" className="block text-sm font-medium text-muted-foreground mb-2">Registration Number</label>
-                      <Input id="registration-number" name="registration-number" type="text" placeholder="Enter your registration number" />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">Message</label>
-                      <Textarea id="message" name="message" placeholder="Enter your message" rows={5} required />
-                    </div>
+                    <p>
+                      <label className="block text-sm font-medium text-muted-foreground mb-2">Full Name <Input name="name" type="text" placeholder="Enter your full name" required /></label>
+                    </p>
+                    <p>
+                      <label className="block text-sm font-medium text-muted-foreground mb-2">Email Address <Input name="email" type="email" placeholder="Enter your email address" required /></label>
+                    </p>
+                    <p>
+                      <label className="block text-sm font-medium text-muted-foreground mb-2">Phone Number <Input name="phone" type="tel" placeholder="Enter your phone number" /></label>
+                    </p>
+                    <p>
+                      <label className="block text-sm font-medium text-muted-foreground mb-2">Registration Number <Input name="registration-number" type="text" placeholder="Enter your registration number" /></label>
+                    </p>
+                    <p>
+                      <label className="block text-sm font-medium text-muted-foreground mb-2">Message <Textarea name="message" placeholder="Enter your message" rows={5} required /></label>
+                    </p>
                   </div>
                   <div className="mt-8">
                     <Button type="submit" className="w-full">Send Message</Button>
