@@ -98,30 +98,7 @@ export default function ContactPage() {
               </div>
               <div className="bg-secondary/20 p-8 rounded-xl border border-primary/20">
                 <h3 className="font-headline text-3xl text-accent mb-8 text-center">Send Us a Message</h3>
-                <form name="contact" onSubmit={handleSubmit}>
-                  <div className="space-y-6">
-                    <p>
-                      <label className="block text-sm font-medium text-muted-foreground mb-2">Full Name <Input name="name" type="text" placeholder="Enter your full name" required /></label>
-                    </p>
-                    <p>
-                      <label className="block text-sm font-medium text-muted-foreground mb-2">Email Address <Input name="email" type="email" placeholder="Enter your email address" required /></label>
-                    </p>
-                    <p>
-                      <label className="block text-sm font-medium text-muted-foreground mb-2">Phone Number <Input name="phone" type="tel" placeholder="Enter your phone number" /></label>
-                    </p>
-                    <p>
-                      <label className="block text-sm font-medium text-muted-foreground mb-2">Registration Number <Input name="registration-number" type="text" placeholder="Enter your registration number" /></label>
-                    </p>
-                    <p>
-                      <label className="block text-sm font-medium text-muted-foreground mb-2">Message <Textarea name="message" placeholder="Enter your message" rows={5} required /></label>
-                    </p>
-                  </div>
-                  <div className="mt-8">
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </Button>
-                  </div>
-                </form>
+                <p className="text-muted-foreground text-center">Our contact form is temporarily unavailable. Please reach out to us directly via email or phone.</p>
               </div>
             </div>
           </div>
