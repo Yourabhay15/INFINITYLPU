@@ -33,6 +33,15 @@ export default function RulesPage() {
               </p>
 
               <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-0">
+                  <AccordionTrigger>0. Important Notices</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li><strong>Organisers' Responsibility:</strong> Organisers reserve the right to make changes to the rules or tournament structure at any moment. It is the responsibility of the organisers to communicate any such changes promptly to all participants.</li>
+                      <li><strong>Read Before Registering:</strong> All participants must read and understand the tournament rules before completing registration. By registering, you agree to abide by all rules and any changes made by the organisers.</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>1. Registration & Fees</AccordionTrigger>
                   <AccordionContent>
