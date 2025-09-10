@@ -77,6 +77,7 @@ export default function RulesPage() {
                   <AccordionContent>
                     <ul className="space-y-3 text-muted-foreground">
                       <li><strong>Game Modes:</strong> Matches will be played in standard Battle Royale mode.</li>
+                      <li><strong>Match Modes:</strong> You can play matches in both modes: online from home and offline LAN as well.</li>
                       <li><strong>Number of Matches/Rounds:</strong> (To be announced in the WhatsApp group based on participant count, e.g., 2-3 matches per stage.)</li>
                       <li><strong>Server:</strong> India server only.</li>
                     </ul>
