@@ -11,6 +11,10 @@ import {
 export default function RulesPage() {
   return (
     <>
+      {/* Info banner visible everywhere */}
+      <div className="w-full bg-accent text-black py-2 px-4 text-center font-semibold text-base z-50">
+        For any event or game related query, contact: <a href="tel:8709581921" className="underline hover:text-primary">8709581921</a>
+      </div>
       <header className="py-32 lg:py-40 bg-black text-center">
         <div className="container mx-auto px-4">
           <h1 className="font-headline text-4xl md:text-6xl font-bold">Tournament <span className="text-accent">Rules</span></h1>
@@ -39,6 +43,8 @@ export default function RulesPage() {
                     <ul className="space-y-3 text-muted-foreground">
                       <li><strong>Organisers' Responsibility:</strong> Organisers reserve the right to make changes to the rules or tournament structure at any moment. It is the responsibility of the organisers to communicate any such changes promptly to all participants.</li>
                       <li><strong>Read Before Registering:</strong> All participants must read and understand the tournament rules before completing registration. By registering, you agree to abide by all rules and any changes made by the organisers.</li>
+                      <li><strong>Identity Verification:</strong> All participants must be prepared to verify their identity (such as student ID or government ID) if requested by the organisers. Failure to do so may result in disqualification.</li>
+                      <li><strong>One Account Per Player:</strong> Each participant is allowed to play on only one account during the tournament. Using multiple accounts or account sharing is strictly prohibited and will result in immediate disqualification.</li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
@@ -128,6 +134,29 @@ export default function RulesPage() {
                       <li><strong>Organizers' Decision:</strong> All decisions made by the tournament organizers regarding rules, disputes, and final results are binding and final.</li>
                       <li><strong>No Duty Leaves:</strong> No duty leaves will be provided.</li>
                       <li><strong>Personal Equipment:</strong> Participants must bring their own cushions, fans, chargers, and other equipment.</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                 <AccordionItem value="item-7">
+                  <AccordionTrigger>7. Player Equipment & Requirements</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li><strong>Devices:</strong> All players must compete using a personal mobile phone or tablet.</li>
+                      <li><strong>Emulators:</strong> The use of emulators, PCs, or any device that is not a handheld mobile device is strictly prohibited and will result in immediate disqualification.</li>
+                      <li><strong>Peripherals:</strong> External devices like controllers, Bluetooth keyboards, or mice are not permitted without explicit approval from tournament officials.</li>
+                      <li><strong>In-Game Names:</strong> In-game player names must be appropriate and free of offensive or vulgar language. Any team or player with an inappropriate name will be required to change it.</li>
+                      <li><strong>Game Version:</strong> All players are responsible for ensuring their game client is updated to the latest version before each match.</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-8">
+                  <AccordionTrigger>8. Match Protocol & Recording</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li><strong>Lobby Join Time:</strong> All teams must join the custom match lobby at least 10 minutes before the scheduled start time. Late entries may not be allowed and could result in a walkover for the opposing team.</li>
+                      <li><strong>Mandatory POV:</strong> Players are strongly advised to record their own gameplay (Point-of-View or POV) for every match. This recording is the primary source of proof for any disputes or accusations of cheating.</li>
+                      <li><strong>Result Submission:</strong> The winning team of each match must take a clear screenshot of the final results and submit it to the designated admin in the WhatsApp group.</li>
+                      <li><strong>No Match Remake:</strong> Matches will not be remade for any reason, including individual player disconnections, lag, or device issues. A remake will only be considered in the case of a major server-side issue affecting a significant number of players, at the sole discretion of the organizers.</li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
