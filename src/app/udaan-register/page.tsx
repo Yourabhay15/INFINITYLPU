@@ -8,9 +8,14 @@ import { CheckCircle2, AlertCircle, Bus, Hotel, Utensils, Building2, Shield, Use
 export default function UdaanRegisterPage() {
   return (
     <>
-      <header className="py-32 lg:py-40 bg-black text-center" data-ai-hint="industrial tour educational visit">
-        <div className="container mx-auto px-4">
-          <h1 className="font-headline text-4xl md:text-6xl font-bold">Project <span className="text-accent">Udaan</span></h1>
+      <header className="py-32 lg:py-40 bg-gradient-to-br from-black via-gray-900 to-black text-center relative overflow-hidden" data-ai-hint="industrial tour educational visit">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(247,37,133,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(247,37,133,0.05)_50%,transparent_70%)]"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="inline-block mb-4">
+            <div className="absolute -inset-1 bg-accent/20 blur-lg rounded-full"></div>
+            <h1 className="font-headline text-4xl md:text-6xl font-bold relative">Project <span className="text-accent drop-shadow-[0_0_15px_rgba(247,37,133,0.5)]">Udaan</span></h1>
+          </div>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
             Industrial Visit to Mundra, Gujarat
           </p>
@@ -26,8 +31,9 @@ export default function UdaanRegisterPage() {
       </header>
 
       {/* Key Info Banner */}
-      <section className="py-8 bg-accent/10 border-y border-accent/20">
-        <div className="container mx-auto px-4">
+      <section className="py-8 bg-gradient-to-r from-accent/10 via-accent/15 to-accent/10 border-y-2 border-accent/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(247,37,133,0.1),transparent)]"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="flex flex-col items-center gap-2">
@@ -80,10 +86,12 @@ export default function UdaanRegisterPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Travel & Transport */}
-              <Card className="bg-secondary/20 border-primary/20 rounded-xl">
+              <Card className="bg-secondary/20 border-primary/20 rounded-xl hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <Bus className="h-8 w-8 text-accent" />
+                    <div className="p-2 bg-accent/20 rounded-lg">
+                      <Bus className="h-8 w-8 text-accent" />
+                    </div>
                     <CardTitle className="font-headline text-xl">1. Travel & Transport</CardTitle>
                   </div>
                 </CardHeader>
@@ -110,10 +118,12 @@ export default function UdaanRegisterPage() {
               </Card>
 
               {/* Accommodation */}
-              <Card className="bg-secondary/20 border-primary/20 rounded-xl">
+              <Card className="bg-secondary/20 border-primary/20 rounded-xl hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <Hotel className="h-8 w-8 text-accent" />
+                    <div className="p-2 bg-accent/20 rounded-lg">
+                      <Hotel className="h-8 w-8 text-accent" />
+                    </div>
                     <CardTitle className="font-headline text-xl">2. Accommodation</CardTitle>
                   </div>
                 </CardHeader>
@@ -132,10 +142,12 @@ export default function UdaanRegisterPage() {
               </Card>
 
               {/* Meals */}
-              <Card className="bg-secondary/20 border-primary/20 rounded-xl">
+              <Card className="bg-secondary/20 border-primary/20 rounded-xl hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <Utensils className="h-8 w-8 text-accent" />
+                    <div className="p-2 bg-accent/20 rounded-lg">
+                      <Utensils className="h-8 w-8 text-accent" />
+                    </div>
                     <CardTitle className="font-headline text-xl">3. Meals</CardTitle>
                   </div>
                 </CardHeader>
@@ -154,10 +166,12 @@ export default function UdaanRegisterPage() {
               </Card>
 
               {/* Industrial Visits */}
-              <Card className="bg-secondary/20 border-primary/20 rounded-xl">
+              <Card className="bg-secondary/20 border-primary/20 rounded-xl hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <Building2 className="h-8 w-8 text-accent" />
+                    <div className="p-2 bg-accent/20 rounded-lg">
+                      <Building2 className="h-8 w-8 text-accent" />
+                    </div>
                     <CardTitle className="font-headline text-xl">4. Industrial Visits</CardTitle>
                   </div>
                 </CardHeader>
@@ -188,10 +202,12 @@ export default function UdaanRegisterPage() {
               </Card>
 
               {/* On-Ground Support */}
-              <Card className="bg-secondary/20 border-primary/20 rounded-xl">
+              <Card className="bg-secondary/20 border-primary/20 rounded-xl hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <Shield className="h-8 w-8 text-accent" />
+                    <div className="p-2 bg-accent/20 rounded-lg">
+                      <Shield className="h-8 w-8 text-accent" />
+                    </div>
                     <CardTitle className="font-headline text-xl">5. On-Ground Support</CardTitle>
                   </div>
                 </CardHeader>
@@ -269,8 +285,9 @@ export default function UdaanRegisterPage() {
       </section>
 
       {/* Registration & Contact Section */}
-      <section className="py-20 lg:py-28 bg-secondary/10">
-        <div className="container mx-auto px-4">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/10 via-accent/5 to-secondary/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(247,37,133,0.1),transparent)]"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-headline text-4xl md:text-5xl font-bold uppercase mb-4">
@@ -281,18 +298,19 @@ export default function UdaanRegisterPage() {
               </p>
             </div>
 
-            <Card className="bg-secondary/20 border-primary/20 rounded-xl mb-8">
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl text-center">Registration Form</CardTitle>
-                <CardDescription className="text-center">
+            <Card className="bg-gradient-to-br from-secondary/30 to-secondary/10 border-2 border-accent/30 rounded-xl mb-8 shadow-xl shadow-accent/10 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300">
+              <CardHeader className="relative">
+                <div className="absolute -top-1 -right-1 w-20 h-20 bg-accent/10 rounded-full blur-2xl"></div>
+                <CardTitle className="font-headline text-2xl text-center relative z-10">Registration Form</CardTitle>
+                <CardDescription className="text-center relative z-10">
                   Interested students please fill the form
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center">
+              <CardContent className="text-center relative z-10">
                 <Button 
                   asChild 
                   size="lg" 
-                  className="font-headline uppercase font-semibold text-base bg-accent hover:bg-accent/90 shadow-[0_5px_15px_rgba(247,37,133,0.3)] hover:-translate-y-1 transition-all duration-300"
+                  className="font-headline uppercase font-semibold text-base bg-accent hover:bg-accent/90 shadow-[0_5px_15px_rgba(247,37,133,0.5)] hover:shadow-[0_8px_25px_rgba(247,37,133,0.6)] hover:-translate-y-1 transition-all duration-300"
                 >
                   <Link href="https://forms.gle/sFiAVMkeH2Gxeqby9" target="_blank" rel="noopener noreferrer">
                     Register for Project Udaan
@@ -304,7 +322,7 @@ export default function UdaanRegisterPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-accent/10 border-accent/30 rounded-xl">
+            <Card className="bg-gradient-to-br from-accent/15 to-accent/5 border-2 border-accent/40 rounded-xl shadow-lg shadow-accent/10">
               <CardHeader>
                 <div className="flex items-center gap-3 justify-center">
                   <Phone className="h-6 w-6 text-accent" />

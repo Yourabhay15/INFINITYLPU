@@ -7,24 +7,17 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const events = [
   {
-    title: 'Game-Verse 2.0',
-    date: '25 - 26 SEPTEMBER',
-    description: 'The ultimate showdown for BGMI & Free Fire MAX players. Squads Only tournament with ₹69 entry fee per person. Compete for exciting prizes!',
-    image: '/Icons and backgrounds/image.png',
-    aiHint: 'esports tournament poster',
-    link: '/bgmi-register',
-    status: 'open',
-  },
-  {
     title: 'Project Udaan',
     date: '24–27 JANUARY 2026',
-    description: 'Industrial Visit to Mundra, Gujarat. A 4-day industrial exposure tour to explore India's major industries and real-time operations. Only 50 slots available - First Come, First Served!',
-    image: '/Icons and backgrounds/image.png',
-    aiHint: 'industrial tour educational visit',
+    description:
+      "Industrial Visit to Mundra, Gujarat. A 4-day industrial exposure tour to explore India's major industries and real-time operations. Only 50 slots available - First Come, First Served!",
+    image: '/Icons and backgrounds/project-udaan.png',
+    aiHint: 'rustic wooden sign with Project Udaan text and wing design',
     link: '/udaan-register',
     status: 'open',
   },
 ];
+
 
 export default function Home() {
   return (
@@ -58,8 +51,9 @@ export default function Home() {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="py-20 lg:py-28">
-        <div className="container mx-auto px-4">
+      <section id="events" className="py-20 lg:py-28 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 fade-in-up">
             <h2 className="font-headline text-4xl md:text-5xl font-bold uppercase">
               Upcoming <span className="text-accent">Events</span>
@@ -71,24 +65,33 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up justify-center" style={{ animationDelay: '0.2s' }}>
             {events.map((event, index) => (
-              <Card key={index} className="bg-secondary/20 border-primary/20 rounded-xl overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 max-w-sm mx-auto">
-                <CardHeader className="p-0">
-                  <div className="relative h-52">
+              <Card key={index} className={`bg-secondary/20 border-primary/20 rounded-xl overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 max-w-sm mx-auto ${event.title === 'Project Udaan' ? 'relative border-2 border-accent/30 shadow-lg shadow-accent/10' : ''}`}>
+                {event.title === 'Project Udaan' && (
+                  <div className="absolute -top-2 -right-2 w-16 h-16 bg-accent/20 rounded-full blur-xl z-0"></div>
+                )}
+                <CardHeader className="p-0 relative">
+                  <div className="relative h-52 overflow-hidden">
                     {event.status === 'soon' ? (
                       <div className="flex items-center justify-center h-full bg-black">
                         <h3 className="text-white font-headline text-4xl">{event.title}</h3>
                       </div>
                     ) : (
-                      <Image src={event.image} alt={event.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={event.aiHint} />
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 z-10"></div>
+                        <Image src={event.image} alt={event.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={event.aiHint} />
+                        {event.title === 'Project Udaan' && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10"></div>
+                        )}
+                      </>
                     )}
                   </div>
                 </CardHeader>
-                <CardContent className="p-6">
-                  <span className="inline-block bg-accent text-accent-foreground text-xs font-bold py-1 px-3 rounded-full mb-4 uppercase">{event.date}</span>
-                  <CardTitle className="font-headline text-xl mb-2">{event.title}</CardTitle>
+                <CardContent className="p-6 relative z-10">
+                  <span className={`inline-block text-xs font-bold py-1 px-3 rounded-full mb-4 uppercase ${event.title === 'Project Udaan' ? 'bg-accent text-accent-foreground shadow-md shadow-accent/30' : 'bg-accent text-accent-foreground'}`}>{event.date}</span>
+                  <CardTitle className={`font-headline text-xl mb-2 ${event.title === 'Project Udaan' ? 'text-accent' : ''}`}>{event.title}</CardTitle>
                   <CardDescription className="text-muted-foreground">{event.description}</CardDescription>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
+                <CardFooter className="p-6 pt-0 relative z-10">
                   <Button asChild variant="link" className="text-accent p-0 font-semibold group/link">
                     <Link href={event.link} className={event.status === 'soon' ? 'pointer-events-none' : ''}>
                       {event.status === 'soon' ? 'Coming Soon' : 'Register Now'}

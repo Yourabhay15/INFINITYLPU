@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
+import '@/lib/global-setup';
 import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
+import dynamic from 'next/dynamic';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Montserrat, Orbitron } from 'next/font/google';
 import { cn } from '@/lib/utils';
+
+const ClientToaster = dynamic(() => import('@/components/ui/client-toaster').then(mod => ({ default: mod.ClientToaster })), {
+  loading: () => null,
+});
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -42,7 +47,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
-        <Toaster />
+        <ClientToaster />
       </body>
     </html>
   );
