@@ -116,7 +116,7 @@ if (typeof global !== 'undefined') {
     if (!global.document) {
       // @ts-ignore
       global.document = {
-        createElement: function(tagName: string) {
+        createElement: function(tagName: string): any {
           return {
             tagName: tagName.toUpperCase(),
             setAttribute: function() {},
@@ -129,10 +129,10 @@ if (typeof global !== 'undefined') {
             style: {},
             innerHTML: '',
             textContent: '',
-          };
+          } as any;
         },
-        createElementNS: function() {
-          return {};
+        createElementNS: function(): any {
+          return {} as any;
         },
         getElementById: function() { return null; },
         getElementsByTagName: function() { return []; },
@@ -151,7 +151,7 @@ if (typeof global !== 'undefined') {
           appendChild: function() {},
           removeChild: function() {},
         },
-      };
+      } as any;
     }
   }
 }
