@@ -27,7 +27,6 @@ export function Footer() {
               <li><Link href="/about" className="text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block">About Us</Link></li>
               <li><Link href="/gallery" className="text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block">Gallery</Link></li>
               <li><Link href="/contact" className="text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block">Contact</Link></li>
-              <li><Link href="/register" className="text-muted-foreground transition-all duration-300 hover:text-accent hover:translate-x-1 inline-block">Register</Link></li>
             </ul>
           </div>
 

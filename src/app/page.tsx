@@ -12,17 +12,17 @@ const events = [
     description: 'The ultimate showdown for BGMI & Free Fire MAX players. Squads Only tournament with ₹69 entry fee per person. Compete for exciting prizes!',
     image: '/Icons and backgrounds/image.png',
     aiHint: 'esports tournament poster',
-    link: '/register',
+    link: '/bgmi-register',
     status: 'open',
   },
   {
-    title: 'Hackfinity',
-    date: 'COMING SOON',
-    description: 'A thrilling hackathon for innovators and creators. Stay tuned for more details!',
+    title: 'Project Udaan',
+    date: '24–27 JANUARY 2026',
+    description: 'Industrial Visit to Mundra, Gujarat. A 4-day industrial exposure tour to explore India's major industries and real-time operations. Only 50 slots available - First Come, First Served!',
     image: '/Icons and backgrounds/image.png',
-    aiHint: 'hackathon poster',
-    link: '#',
-    status: 'soon',
+    aiHint: 'industrial tour educational visit',
+    link: '/udaan-register',
+    status: 'open',
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Home() {
               Upcoming <span className="text-accent">Events</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Join our upcoming tournaments and gaming events to showcase your skills and win exciting prizes!
+              Join our upcoming events and experiences to learn, grow, and excel!
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
                   <div className="relative h-52">
                     {event.status === 'soon' ? (
                       <div className="flex items-center justify-center h-full bg-black">
-                        <h3 className="text-white font-headline text-4xl">Hackfinity</h3>
+                        <h3 className="text-white font-headline text-4xl">{event.title}</h3>
                       </div>
                     ) : (
                       <Image src={event.image} alt={event.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" data-ai-hint={event.aiHint} />

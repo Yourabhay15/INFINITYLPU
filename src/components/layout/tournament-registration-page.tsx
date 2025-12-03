@@ -44,8 +44,6 @@ export default function TournamentRegistrationPage({ gameName, modes, pageTitle,
                     <div className="mt-4 text-sm text-muted-foreground">
                         <Link href="/" className="hover:text-accent">Home</Link>
                         <span className="mx-2">/</span>
-                        <Link href="/register" className="hover:text-accent">Register</Link>
-                        <span className="mx-2">/</span>
                         <span>{breadcrumb}</span>
                     </div>
                 </div>
@@ -85,20 +83,6 @@ export default function TournamentRegistrationPage({ gameName, modes, pageTitle,
                 </div>
             </section>
 
-            {/* Tournament Rules Section */}
-            <section className="py-20 lg:py-28 bg-secondary/10">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="font-headline text-4xl md:text-5xl font-bold uppercase">Tournament <span className="text-accent">Rules</span></h2>
-                        <p className="mt-4 text-lg text-muted-foreground">
-                            Please review the official tournament rules before registering.
-                        </p>
-                        <Button asChild size="lg" className="mt-6 font-headline uppercase font-semibold text-base bg-accent hover:bg-accent/90 shadow-[0_5px_15px_rgba(247,37,133,0.3)] hover:-translate-y-1 transition-all duration-300">
-                            <Link href="/rules">View Full Rules</Link>
-                        </Button>
-                    </div>
-                </div>
-            </section>
         </>
     );
 }
