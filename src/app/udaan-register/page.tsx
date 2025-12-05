@@ -14,18 +14,21 @@ export default function UdaanRegisterPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="inline-block mb-4">
             <div className="absolute -inset-1 bg-accent/20 blur-lg rounded-full"></div>
-            <h1 className="font-headline text-4xl md:text-6xl font-bold relative">Project <span className="text-accent drop-shadow-[0_0_15px_rgba(247,37,133,0.5)]">Udaan</span></h1>
+            <h1 className="font-headline text-4xl md:text-6xl font-bold relative">
+              Industrial Visit
+              <span className="text-accent drop-shadow-[0_0_15px_rgba(247,37,133,0.5)]"> · Project Udaan</span>
+            </h1>
           </div>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-            Industrial Visit to Mundra, Gujarat
+            Educational Industrial Visit to Mundra, Gujarat (Project Udaan)
           </p>
           <p className="mt-2 text-base text-muted-foreground">
-            Organised by INFINITY in collaboration with the Adani Foundation
+            Organized by INFINITY in collaboration with the Adani Foundation
           </p>
           <div className="mt-4 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-accent">Home</Link>
             <span className="mx-2">/</span>
-            <span>Project Udaan</span>
+            <span>Industrial Visit · Project Udaan</span>
           </div>
         </div>
       </header>
@@ -62,12 +65,12 @@ export default function UdaanRegisterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-headline text-4xl md:text-5xl font-bold uppercase mb-4">
-                About <span className="text-accent">Project Udaan</span>
+                About <span className="text-accent">the Industrial Visit</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                A 4-day industrial exposure tour to explore India's major industries and real-time operations. 
+                A 4-day industrial exposure tour (Project Udaan) to explore India's major industries and real-time operations. 
                 This visit gives students a rare opportunity to explore Adani Port, Adani Power, Adani Wilmar, 
-                Adani Solar, and various large-scale industrial operations in Mundra, Gujarat.
+                Adani Solar, and large-scale logistics & energy infrastructure in Mundra, Gujarat.
               </p>
             </div>
           </div>
@@ -291,7 +294,7 @@ export default function UdaanRegisterPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-headline text-4xl md:text-5xl font-bold uppercase mb-4">
-                Register <span className="text-accent">Now</span>
+                Register for the <span className="text-accent">Industrial Visit</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Limited seats—only 50 available. First come, first served!
@@ -303,7 +306,7 @@ export default function UdaanRegisterPage() {
                 <div className="absolute -top-1 -right-1 w-20 h-20 bg-accent/10 rounded-full blur-2xl"></div>
                 <CardTitle className="font-headline text-2xl text-center relative z-10">Registration Form</CardTitle>
                 <CardDescription className="text-center relative z-10">
-                  Interested students please fill the form
+                  Interested students please fill the form to confirm your slot
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center relative z-10">
@@ -312,8 +315,8 @@ export default function UdaanRegisterPage() {
                   size="lg" 
                   className="font-headline uppercase font-semibold text-base bg-accent hover:bg-accent/90 shadow-[0_5px_15px_rgba(247,37,133,0.5)] hover:shadow-[0_8px_25px_rgba(247,37,133,0.6)] hover:-translate-y-1 transition-all duration-300"
                 >
-                  <Link href="https://forms.gle/sFiAVMkeH2Gxeqby9" target="_blank" rel="noopener noreferrer">
-                    Register for Project Udaan
+                  <Link href="https://forms.gle/3QGzwiAZMSKWwHCH6" target="_blank" rel="noopener noreferrer">
+                    Register for Industrial Visit
                   </Link>
                 </Button>
                 <p className="mt-4 text-sm text-muted-foreground">
